@@ -1,19 +1,26 @@
 import type { NextPage } from 'next'
 import styled from "styled-components";
 
-const LineSeparator = styled.hr`
+const LineSeparator = styled.div`
   margin: 3rem 0;
-  border: 0; 
-  height: 1px; 
-  background-image: -webkit-linear-gradient(left, black, white, black);
-  background-image: -moz-linear-gradient(left, black, white, black);
-  background-image: -ms-linear-gradient(left, black, white, black);
-  background-image: -o-linear-gradient(left, black, white, black); 
+  & > hr {
+    width: 0%;
+    min-width: 20%;
+    max-width: 100%;
+    margin: 0 auto;
+    border: none;
+    border-bottom: 2px solid var(--color-text-primary);
+    position: relative;
+    transition: box-shadow 200ms ease-in-out;
+    box-shadow: 0px 0px 0px 0px var(--color-text-secondary);
+  }
 `
 
 const Separator: NextPage = () => {
   return (
-    <LineSeparator />
+    <LineSeparator>
+      <hr />
+    </LineSeparator>
   )
 }
 
