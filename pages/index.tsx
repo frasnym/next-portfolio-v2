@@ -1,9 +1,10 @@
 import type { NextPage } from 'next'
 import dynamic from 'next/dynamic'
 import styled from 'styled-components'
-import Separator from '../components/separator';
+import MediaSocial from '../components/home-page/media-social';
+import Separator from '../components/ui/separator';
 
-const ThemeToggle = dynamic(() => import('../components/theme-toggle'), { ssr: false })
+const ThemeToggle = dynamic(() => import('../components/ui/theme-toggle'), { ssr: false })
 
 const Container = styled.div`
   display: flex;
@@ -20,6 +21,11 @@ const Header = styled.header`
   text-align: center;
   & > div#titleContainer {
     display: flex;
+  }
+  & img#indonesianFlag {
+    display: inline;
+    width: 1.5rem;
+    vertical-align: middle;
   }
 `
 
@@ -99,18 +105,33 @@ const Home: NextPage = () => {
               <span>Nym</span>
             </HeaderTitle>
           </div>
-          <h2>Indonesian Software Engineer </h2>
+          <h2>
+            Indonesian {' '}
+            <img
+              id="indonesianFlag"
+              className="w-10 inline"
+              src="images/flag-indonesia_1f1ee-1f1e9.png"
+              alt="Flag of Indonesia Country"
+            />
+            {' '} Software Engineer </h2>
         </Header>
-        <Separator />
-        <Blockquote>
-          <p>Code. Travel. Eat.</p>
-        </Blockquote>
-        <Separator />
-        <ContactSection>
-          <p>
-            I love building things with code {'&'} hopefully one day the results will pay for my trip to Switzerland..
-          </p>
-        </ContactSection>
+        <section>
+          <Separator />
+          <Blockquote>
+            <p>Code. Travel. Eat.</p>
+          </Blockquote>
+          <Separator />
+        </section>
+        <section>
+          <ContactSection>
+            <p>
+              I love building things with code {'&'} hopefully one day the results will pay for my trip to Switzerland..
+            </p>
+          </ContactSection>
+        </section>
+        <section>
+          <MediaSocial />
+        </section>
       </main>
     </Container>
   )
