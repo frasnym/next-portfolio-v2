@@ -56,6 +56,7 @@ const HeaderImage = styled.div`
 `
 
 const Blockquote = styled.div`
+  border-radius: 5px;
   background: var(--color-bg-toggle);
   text-align: center;
   font-size: 1.2rem;
