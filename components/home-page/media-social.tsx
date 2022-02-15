@@ -30,7 +30,7 @@ const anchorIcons = [
   },
 ];
 
-const AnchorContainer = styled.div`
+const AnchorContainer = styled.section`
   text-align: center;
   & > a {
     color: var(--color-text-primary);
