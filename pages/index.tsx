@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import dynamic from 'next/dynamic'
 import styled from 'styled-components'
 import MediaSocial from '../components/home-page/media-social';
+import Menu from '../components/ui/menu';
 import Separator from '../components/ui/separator';
 
 const ThemeToggle = dynamic(() => import('../components/ui/theme-toggle'), { ssr: false })
@@ -93,6 +94,7 @@ const Home: NextPage = () => {
     <Container>
       <main>
         <ThemeToggle />
+        <Menu />
         <Header>
           <div id="titleContainer">
             <HeaderImage>

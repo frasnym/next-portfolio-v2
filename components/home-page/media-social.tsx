@@ -5,28 +5,28 @@ import { FaTwitter, FaGithub, FaLinkedinIn, FaGooglePlay, FaRegEnvelope, FaDev }
 const anchorIcons = [
   {
     href: 'mailto:frastyawan.nym@gmail.com',
-    icon: <FaRegEnvelope className="inline-block mr-6" />,
+    icon: <FaRegEnvelope />,
   },
   {
     href: 'https://www.linkedin.com/in/frasnym/',
-    icon: <FaLinkedinIn className="inline-block mr-6" />,
+    icon: <FaLinkedinIn />,
   },
   {
     href: 'https://github.com/frasnym',
-    icon: <FaGithub className="inline-block mr-6" />,
+    icon: <FaGithub />,
   },
   {
     href: 'https://twitter.com/frasnym',
-    icon: <FaTwitter className="inline-block mr-6" />,
+    icon: <FaTwitter />,
   },
   {
     href: 'https://dev.to/frasnym/',
-    icon: <FaDev className="inline-block mr-6" />,
+    icon: <FaDev />,
   },
   {
     href:
       'https://play.google.com/store/apps/developer?id=FrastyawanNym',
-    icon: <FaGooglePlay className="inline-block mr-6" />,
+    icon: <FaGooglePlay />,
   },
 ];
 
