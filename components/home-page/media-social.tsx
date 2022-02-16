@@ -18,7 +18,6 @@ const MediaSocial: NextPage = () => {
       {
         MEDIA_SOCIAL_LINKS.map(aIcon => (
           <a
-            className="text-white text-3xl inline"
             key={aIcon.href}
             href={aIcon.href}
             target="_blank"
