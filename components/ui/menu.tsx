@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
+import Link from 'next/link';
 import { useState } from 'react';
-import { FaHamburger, FaTimes, FaUserAstronaut } from 'react-icons/fa';
+import { FaHamburger, FaTimes } from 'react-icons/fa';
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -108,7 +109,9 @@ const Menu: NextPage = () => {
 
   return (
     <Container>
-      <Item showMenu={showMenu}>About</Item>
+      <Link href="/about-me">
+        <a><Item showMenu={showMenu}>About</Item></a>
+      </Link>
       <Item showMenu={showMenu}>Skills</Item>
       <Item showMenu={showMenu}>Career</Item>
       <Item showMenu={showMenu}>Project</Item>
