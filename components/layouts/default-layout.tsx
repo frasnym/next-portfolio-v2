@@ -2,6 +2,7 @@ import styled from "styled-components";
 import dynamic from 'next/dynamic'
 import Menu from "../ui/menu";
 import Head from "next/head";
+import Footer from "../ui/footer";
 
 const ThemeToggle = dynamic(() => import('../ui/theme-toggle'), { ssr: false })
 
@@ -11,8 +12,7 @@ type DefaultLayoutProps = {
 };
 
 const Container = styled.div`
-  display: flex;
-  justify-content: center;
+  text-align: center;
   padding-top: var(--nav-height);
   max-width: var(--max-width);
   margin: 0 auto;
@@ -54,9 +54,10 @@ export default function DefaultLayout({ children, title }: DefaultLayoutProps) {
         <meta name="twitter:creator" content="@frasnym" />
       </Head>
       <PageContainer>{children}</PageContainer>
-      {/* <Footer /> */}
       <ThemeToggle />
       <Menu />
+      <hr />
+      <Footer />
     </Container>
   );
 }
