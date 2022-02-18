@@ -2,8 +2,8 @@ import type { NextPage } from 'next'
 import dynamic from 'next/dynamic'
 import Link from 'next/link';
 import styled from "styled-components";
-import Menu from './menu';
-const ThemeToggle = dynamic(() => import('./theme-toggle'), { ssr: false })
+import BurgerMenu from '../navbar-ui/burger-menu';
+const ThemeToggle = dynamic(() => import('../navbar-ui/theme-toggle'), { ssr: false })
 
 const Container = styled.div`
   position: fixed;
@@ -38,7 +38,7 @@ const NavMenu = styled.nav`
 const NavBar: NextPage = () => {
   return (
     <Container>
-      {/* <Menu /> */}
+      {/* <BurgerMenu /> */}
       <NavMenu>
         <Link href="/"><a>Home</a></Link>
         <Link href="/about-me"><a>About</a></Link>

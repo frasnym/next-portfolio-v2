@@ -98,7 +98,7 @@ const Item = styled.div<{ showMenu: boolean }>`
   }
 `
 
-const Menu: NextPage = () => {
+const BurgerMenu: NextPage = () => {
   const [showMenu, setShowMenu] = useState(false)
 
   return (
@@ -117,4 +117,4 @@ const Menu: NextPage = () => {
   )
 }
 
-export default Menu
+export default BurgerMenu
