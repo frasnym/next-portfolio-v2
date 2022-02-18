@@ -15,6 +15,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: var(--color-bg-primary-transparent);
 `
 
 const NavMenu = styled.nav`
@@ -36,8 +37,6 @@ const NavMenu = styled.nav`
     }
   }
 `
-
-// TODO: Add background when scroll
 
 const NavBar: NextPage = () => {
   return (
