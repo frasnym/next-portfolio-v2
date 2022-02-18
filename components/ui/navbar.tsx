@@ -45,7 +45,7 @@ const NavBar: NextPage = () => {
       <NavMenu>
         <Link href="/"><a>Home</a></Link>
         <Link href="/about-me"><a>About</a></Link>
-        <Link href="/"><a>Skills</a></Link>
+        <Link href="/code"><a>Code</a></Link>
         <Link href="/"><a>Career</a></Link>
         <Link href="/"><a>Project</a></Link>
       </NavMenu>

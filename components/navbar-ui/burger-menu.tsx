@@ -121,7 +121,9 @@ const BurgerMenu: NextPage = () => {
       <Item showMenu={showMenu}>
         <Link href="/about-me"><a>About</a></Link>
       </Item>
-      <Item showMenu={showMenu}>Skills</Item>
+      <Item showMenu={showMenu}>
+        <Link href="/code"><a>Code</a></Link>
+      </Item>
       <Item showMenu={showMenu}>Career</Item>
       <Item showMenu={showMenu}>Project</Item>
       <ShowHideBtn showMenu={showMenu} onClick={() => setShowMenu(!showMenu)}>
