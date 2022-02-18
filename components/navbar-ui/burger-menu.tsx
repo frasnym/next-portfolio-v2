@@ -22,9 +22,12 @@ const ShowHideBtn = styled.div<{ showMenu: boolean }>`
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   -webkit-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  & :hover {
+    box-shadow: 0 0 5px 2px var(--color-bg-toggle);
+    transition: background 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+  }
   & > .burgerBtn {
     position: absolute;
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
@@ -69,9 +72,12 @@ const Item = styled.div<{ showMenu: boolean }>`
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  -webkit-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  -webkit-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  & :hover {
+    box-shadow: 0 0 5px 2px var(--color-bg-toggle);
+    transition: background 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+  }
   & :nth-child(1) {
     ${(p) => p.showMenu ? "top: 1rem; left: 6rem; opacity: 1;" : "top: 0; left: 0; opacity: 0;"}
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
@@ -79,22 +85,28 @@ const Item = styled.div<{ showMenu: boolean }>`
     transition-delay: 0.1s;
   }
   & :nth-child(2) {
-    ${(p) => p.showMenu ? "top: 4rem; left: 2.5rem; opacity: 1;" : "top: 0; left: 0; opacity: 0;"}
+    ${(p) => p.showMenu ? "top: 4rem; left: 3rem; opacity: 1;" : "top: 0; left: 0; opacity: 0;"}
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     -webkit-transition-delay: 0.2s;
     transition-delay: 0.2s;
   }
   & :nth-child(3) {
-    ${(p) => p.showMenu ? "top: 6rem; left: 6rem; opacity: 1;" : "top: 0; left: 0; opacity: 0;"}
+    ${(p) => p.showMenu ? "top: 5rem; left: 7rem; opacity: 1;" : "top: 0; left: 0; opacity: 0;"}
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     -webkit-transition-delay: 0.3s;
     transition-delay: 0.3s;
   }
   & :nth-child(4) {
-    ${(p) => p.showMenu ? "top: 8rem; left: 0.5rem; opacity: 1;" : "top: 0; left: 0; opacity: 0;"}
+    ${(p) => p.showMenu ? "top: 7rem; left: 0.5rem; opacity: 1;" : "top: 0; left: 0; opacity: 0;"}
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    -webkit-transition-delay: 041s;
+    -webkit-transition-delay: 04s;
     transition-delay: 0.4s;
+  }
+  & :nth-child(5) {
+    ${(p) => p.showMenu ? "top: 8rem; left: 4.5rem; opacity: 1;" : "top: 0; left: 0; opacity: 0;"}
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -webkit-transition-delay: 05s;
+    transition-delay: 0.5s;
   }
 `
 
@@ -103,15 +115,18 @@ const BurgerMenu: NextPage = () => {
 
   return (
     <>
-      <Link href="/about-me">
-        <a><Item showMenu={showMenu}>About</Item></a>
-      </Link>
+      <Item showMenu={showMenu}>
+        <Link href="/"><a>Home</a></Link>
+      </Item>
+      <Item showMenu={showMenu}>
+        <Link href="/about-me"><a>About</a></Link>
+      </Item>
       <Item showMenu={showMenu}>Skills</Item>
       <Item showMenu={showMenu}>Career</Item>
       <Item showMenu={showMenu}>Project</Item>
-      <ShowHideBtn showMenu={showMenu}>
-        <FaHamburger className='burgerBtn' onClick={() => setShowMenu(!showMenu)} />
-        <FaTimes className='timesBtn' onClick={() => setShowMenu(!showMenu)} />
+      <ShowHideBtn showMenu={showMenu} onClick={() => setShowMenu(!showMenu)}>
+        <FaHamburger className='burgerBtn' />
+        <FaTimes className='timesBtn' />
       </ShowHideBtn>
     </>
   )

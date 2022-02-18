@@ -18,6 +18,10 @@ const Container = styled.div`
 `
 
 const NavMenu = styled.nav`
+  display: block;
+  @media (max-width: 600px) {
+    display: none;
+  }
   & a {
     color: var(--color-text-primary);
     text-decoration: none;
@@ -38,7 +42,7 @@ const NavMenu = styled.nav`
 const NavBar: NextPage = () => {
   return (
     <Container>
-      {/* <BurgerMenu /> */}
+      <BurgerMenu />
       <NavMenu>
         <Link href="/"><a>Home</a></Link>
         <Link href="/about-me"><a>About</a></Link>
