@@ -13,6 +13,7 @@ const Container = styled.footer`
 const Footer: NextPage = () => {
   return (
     <Container>
+      <hr />
       {
         MEDIA_SOCIAL_LINKS.map(aIcon => {
           return (

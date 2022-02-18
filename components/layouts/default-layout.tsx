@@ -55,7 +55,6 @@ const DefaultLayout: NextPage<DefaultLayoutProps> = function ({ children, title 
       <PageContainer>
         {children}
       </PageContainer>
-      <hr />
       <Footer />
     </Container>
   );
