@@ -1,10 +1,8 @@
 import styled from "styled-components";
-import dynamic from 'next/dynamic'
-import Menu from "../ui/menu";
 import Head from "next/head";
 import Footer from "../ui/footer";
-
-const ThemeToggle = dynamic(() => import('../ui/theme-toggle'), { ssr: false })
+import { NextPage } from "next";
+import NavBar from "../ui/navbar";
 
 type DefaultLayoutProps = {
   children: React.ReactNode,
@@ -22,9 +20,10 @@ const PageContainer = styled.div`
   padding: 10px;
 `
 
-export default function DefaultLayout({ children, title }: DefaultLayoutProps) {
+const DefaultLayout: NextPage<DefaultLayoutProps> = function ({ children, title }) {
   return (
     <Container>
+      <NavBar />
       <Head>
         <title>{title} | FrasNym</title>
         <link rel="shortcut icon" href="/favicon.ico" />
@@ -53,11 +52,13 @@ export default function DefaultLayout({ children, title }: DefaultLayoutProps) {
         <meta name="twitter:site" content="@frasnym" />
         <meta name="twitter:creator" content="@frasnym" />
       </Head>
-      <PageContainer>{children}</PageContainer>
-      <ThemeToggle />
-      <Menu />
+      <PageContainer>
+        {children}
+      </PageContainer>
       <hr />
       <Footer />
     </Container>
   );
 }
+
+export default DefaultLayout

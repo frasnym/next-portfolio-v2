@@ -4,12 +4,6 @@ import { useState } from 'react';
 import { FaHamburger, FaTimes } from 'react-icons/fa';
 import styled from "styled-components";
 
-const Container = styled.div`
-  position: fixed;
-  top: 0.5rem;
-  left: 0.5rem;
-`
-
 const ShowHideBtn = styled.div<{ showMenu: boolean }>`
   background: var(--color-bg-toggle);
   width: 3rem;
@@ -108,7 +102,7 @@ const Menu: NextPage = () => {
   const [showMenu, setShowMenu] = useState(false)
 
   return (
-    <Container>
+    <>
       <Link href="/about-me">
         <a><Item showMenu={showMenu}>About</Item></a>
       </Link>
@@ -119,7 +113,7 @@ const Menu: NextPage = () => {
         <FaHamburger className='burgerBtn' onClick={() => setShowMenu(!showMenu)} />
         <FaTimes className='timesBtn' onClick={() => setShowMenu(!showMenu)} />
       </ShowHideBtn>
-    </Container>
+    </>
   )
 }
 
