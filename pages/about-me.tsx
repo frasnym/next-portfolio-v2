@@ -40,7 +40,7 @@ const AboutMe: NextPage = () => {
           <text>This is some photos of Bali</text>
         </BaliContainer>
         <p>After 3 years working with PHP, I want to develop my career and start working with <b>Javascript</b> and <b>Golang</b> programming languages. I started working with a big team and learned a lot of new things.</p>
-        <p>Until now, I have been working in programming for about 4 years. I'm used to working in teams, working with senior developers who always help raise my standart  for applications that can be used by wider community.</p>
+        <p>Until now, I have been working in programming for about 4 years. I&apos;m used to working in teams, working with senior developers who always help raise my standart  for applications that can be used by wider community.</p>
         <p>Lastly, if you need help building something to achieve your goals with code or just want to know more about me. Feel free to contact me on any of my social media <Emoji symbol='😉' />.</p>
       </Container>
     </DefaultLayout>
