@@ -2,13 +2,6 @@ import type { NextPage } from 'next'
 import { useEffect, useState } from 'react';
 import styled from "styled-components";
 
-const ToggleContainer = styled.div`
-  position: fixed;
-  top: 0;
-  right: 0;
-  padding: 0.5rem 0.5rem 0 0;
-`
-
 const ToggleButton = styled.button`
   --toggle-width: 80px;
   --toggle-height: 38px;
@@ -63,18 +56,16 @@ const ThemeToggle: NextPage = () => {
   }, [activeTheme]);
 
   return (
-    <ToggleContainer>
-      <ToggleButton
-        aria-label={`Change to ${inactiveTheme} mode`}
-        title={`Change to ${inactiveTheme} mode`}
-        type="button"
-        onClick={() => setActiveTheme(inactiveTheme)}
-      >
-        <ToggleThumb activeTheme={activeTheme} />
-        <span aria-hidden={true}>🌙</span>
-        <span aria-hidden={true}>☀️</span>
-      </ToggleButton>
-    </ToggleContainer>
+    <ToggleButton
+      aria-label={`Change to ${inactiveTheme} mode`}
+      title={`Change to ${inactiveTheme} mode`}
+      type="button"
+      onClick={() => setActiveTheme(inactiveTheme)}
+    >
+      <ToggleThumb activeTheme={activeTheme} />
+      <span aria-hidden={true}>🌙</span>
+      <span aria-hidden={true}>☀️</span>
+    </ToggleButton>
   )
 }
 
