@@ -5,6 +5,7 @@ import { MEDIA_SOCIAL_LINKS } from '../utils/contant';
 const Container = styled.footer`
   text-align: right;
   padding: 0.5rem 0 1rem;
+  margin: 0 0.5rem;
   & a {
     padding: 0 0.2rem;
     vertical-align: middle;
