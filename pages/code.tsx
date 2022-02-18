@@ -40,7 +40,7 @@ const Code: NextPage = () => {
         <p>
           And some honorable mentions. There are tools, architectures, best practices and more that help me when developing apps.
           <SkillsBox
-            skills={['Git', 'Docker', 'Unit Testing', 'Message Queue']}
+            skills={['Git', 'Docker', 'Unit Testing', 'Message Queue', 'gRPC']}
             colorPalletes={COLOR_PALLETES[2]}
           />
         </p>

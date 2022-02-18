@@ -57,7 +57,7 @@ export const COLOR_PALLETES: ColorPallete[][] = [
     { background: '#f3722c', color: 'var(--color-text-light)' },
     { background: '#f8961e', color: 'var(--color-text-dark)' },
     { background: '#f9844a', color: 'var(--color-text-dark)' },
-    { background: '#f9c74f', color: 'var(--color-text-light)' },
+    { background: '#f9c74f', color: 'var(--color-text-dark)' },
     { background: '#90be6d', color: 'var(--color-text-light)' },
     { background: '#43aa8b', color: 'var(--color-text-light)' },
     { background: '#4d908e', color: 'var(--color-text-light)' },
