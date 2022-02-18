@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import Image from 'next/image';
 import styled from "styled-components";
 
 const Container = styled.header`
@@ -31,7 +32,7 @@ const HeaderTitle = styled.h1`
 
 const HeaderImage = styled.div`
   flex: 1;
-  & > img {
+  & img {
     min-width: 10rem;
     max-width: 100%;
     border-radius: 100%;
@@ -44,9 +45,11 @@ const Header: NextPage = () => {
     <Container>
       <div id="titleContainer">
         <HeaderImage>
-          <img
+          <Image
             src="/images/avatar.jpg"
             alt="Photos of FrasNym"
+            width={260}
+            height={260}
           />
         </HeaderImage>
         <HeaderTitle>
@@ -56,11 +59,12 @@ const Header: NextPage = () => {
       </div>
       <h2>
         Indonesian {' '}
-        <img
-          id="indonesianFlag"
+        <Image
           className="w-10 inline"
-          src="images/flag-indonesia_1f1ee-1f1e9.png"
+          src="/images/flag-indonesia_1f1ee-1f1e9.png"
           alt="Flag of Indonesia Country"
+          width={24}
+          height={24}
         />
         {' '} Software Engineer </h2>
     </Container>
