@@ -1,8 +1,8 @@
 import type { NextPage } from 'next'
 import Image from 'next/image';
+import { Emoji } from 'react-component-utility';
 import styled from 'styled-components';
 import DefaultLayout from '../components/layouts/default-layout';
-import Emoji from '../components/ui/emoji';
 
 const Container = styled.article`
   text-align: left;
