@@ -26,6 +26,9 @@ const Blockquote = styled.section`
   }
   & p {
     display: inline;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
   }
 `
 
