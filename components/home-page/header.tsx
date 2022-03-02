@@ -1,5 +1,5 @@
-import type { NextPage } from 'next'
-import Image from 'next/image';
+import type { NextPage } from "next";
+import Image from "next/image";
 import styled from "styled-components";
 
 const Container = styled.header`
@@ -12,7 +12,7 @@ const Container = styled.header`
     width: 1.5rem;
     vertical-align: middle;
   }
-`
+`;
 
 const HeaderTitle = styled.h1`
   flex: 1;
@@ -28,7 +28,7 @@ const HeaderTitle = styled.h1`
   & > span:nth-of-type(2) {
     font-size: 10vmin;
   }
-`
+`;
 
 const HeaderImage = styled.div`
   flex: 1;
@@ -38,7 +38,11 @@ const HeaderImage = styled.div`
     border-radius: 100%;
     padding: 2rem;
   }
-`
+`;
+
+const IndonesiaImage = styled.span`
+  vertical-align: sub;
+`;
 
 const Header: NextPage = () => {
   return (
@@ -58,17 +62,19 @@ const Header: NextPage = () => {
         </HeaderTitle>
       </div>
       <h2>
-        Indonesian {' '}
-        <Image
-          className="w-10 inline"
-          src="/images/flag-indonesia_1f1ee-1f1e9.png"
-          alt="Flag of Indonesia Country"
-          width={24}
-          height={24}
-        />
-        {' '} Software Engineer </h2>
+        Indonesian{" "}
+        <IndonesiaImage>
+          <Image
+            src="/images/flag-indonesia_1f1ee-1f1e9.png"
+            alt="Flag of Indonesia Country"
+            width={24}
+            height={24}
+          />
+        </IndonesiaImage>{" "}
+        Software Engineer{" "}
+      </h2>
     </Container>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
