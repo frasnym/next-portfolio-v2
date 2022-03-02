@@ -9,6 +9,7 @@ const Container = styled.div`
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 99;
   width: 100%;
   text-align: center;
   padding: 1rem;
