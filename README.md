@@ -1,3 +1,5 @@
+![Vercel](https://vercelbadge.vercel.app/api/frasnym/next-portfolio-v2)
+
 # FrasNym's Portfolio Site Repo
 
 A portfolio website to introduce myself to the world 👋. Please come to visit: [Here](http://frasnym.tech)
