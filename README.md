@@ -3,6 +3,7 @@
 A portfolio website to introduce myself to the world 👋. Please come to visit: [Here](http://frasnym.tech)
 
 ## Features
+- ✍ Written in TypeScript
 - 💻 Builded with NextJs
 - 🚀 Deployed on Vercel
 - 🐳 Docker support for development

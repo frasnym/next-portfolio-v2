@@ -2,4 +2,6 @@
     "editor.formatOnSave": true,
     "editor.insertSpaces": true,
     "editor.tabSize": 2,
+    "prettier.jsxSingleQuote": true,
+    "prettier.singleQuote": true
 }
