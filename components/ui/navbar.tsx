@@ -1,9 +1,11 @@
-import type { NextPage } from 'next'
-import dynamic from 'next/dynamic'
+import type { NextPage } from 'next';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import styled from "styled-components";
+import styled from 'styled-components';
 import BurgerMenu from '../navbar-ui/burger-menu';
-const ThemeToggle = dynamic(() => import('../navbar-ui/theme-toggle'), { ssr: false })
+const ThemeToggle = dynamic(() => import('../navbar-ui/theme-toggle'), {
+  ssr: false,
+});
 
 const Container = styled.div`
   position: fixed;
@@ -17,7 +19,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   background: var(--color-bg-primary-transparent);
-`
+`;
 
 const NavMenu = styled.nav`
   display: block;
@@ -37,22 +39,31 @@ const NavMenu = styled.nav`
       color: var(--color-bg-toggle);
     }
   }
-`
+`;
 
 const NavBar: NextPage = () => {
   return (
     <Container>
       <BurgerMenu />
       <NavMenu>
-        <Link href="/"><a>Home</a></Link>
-        <Link href="/about-me"><a>About</a></Link>
-        <Link href="/code"><a>Code</a></Link>
+        <Link href='/'>
+          <a>Home</a>
+        </Link>
+        <Link href='/about-me'>
+          <a>About</a>
+        </Link>
+        <Link href='/code'>
+          <a>Code</a>
+        </Link>
+        <Link href='/writing'>
+          <a>Writing</a>
+        </Link>
         {/* <Link href="/"><a>Career</a></Link>
         <Link href="/"><a>Project</a></Link> */}
       </NavMenu>
       <ThemeToggle />
     </Container>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;

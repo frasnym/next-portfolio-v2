@@ -1,5 +1,12 @@
-import { FaTwitter, FaGithub, FaLinkedinIn, FaGooglePlay, FaRegEnvelope, FaDev } from 'react-icons/fa';
-import { ColorPallete } from '../../types';
+import {
+  FaTwitter,
+  FaGithub,
+  FaLinkedinIn,
+  FaGooglePlay,
+  FaRegEnvelope,
+  FaDev,
+} from 'react-icons/fa';
+import { ColorPallet } from '../../types';
 
 export const MEDIA_SOCIAL_LINKS = [
   {
@@ -23,13 +30,12 @@ export const MEDIA_SOCIAL_LINKS = [
     icon: <FaDev />,
   },
   {
-    href:
-      'https://play.google.com/store/apps/developer?id=FrastyawanNym',
+    href: 'https://play.google.com/store/apps/developer?id=FrastyawanNym',
     icon: <FaGooglePlay />,
   },
 ];
 
-export const COLOR_PALLETES: ColorPallete[][] = [
+export const COLOR_PALLETES: ColorPallet[][] = [
   [
     { background: '#005f73', color: 'var(--color-text-light)' },
     { background: '#0a9396', color: 'var(--color-text-light)' },
@@ -63,5 +69,5 @@ export const COLOR_PALLETES: ColorPallete[][] = [
     { background: '#4d908e', color: 'var(--color-text-light)' },
     { background: '#577590', color: 'var(--color-text-light)' },
     { background: '#277da1', color: 'var(--color-text-light)' },
-  ]
+  ],
 ];

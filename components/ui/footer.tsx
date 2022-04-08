@@ -1,6 +1,6 @@
-import type { NextPage } from 'next'
-import styled from "styled-components";
-import { MEDIA_SOCIAL_LINKS } from '../utils/contant';
+import type { NextPage } from 'next';
+import styled from 'styled-components';
+import { MEDIA_SOCIAL_LINKS } from '../utils/constant';
 
 const Container = styled.footer`
   text-align: right;
@@ -10,28 +10,26 @@ const Container = styled.footer`
     padding: 0 0.2rem;
     vertical-align: middle;
   }
-`
+`;
 const Footer: NextPage = () => {
   return (
     <Container>
       <hr />
-      {
-        MEDIA_SOCIAL_LINKS.map(aIcon => {
-          return (
-            <a
-              key={aIcon.href}
-              href={aIcon.href}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {aIcon.icon}
-            </a>
-          )
-        })
-      }
+      {MEDIA_SOCIAL_LINKS.map((aIcon) => {
+        return (
+          <a
+            key={aIcon.href}
+            href={aIcon.href}
+            target='_blank'
+            rel='noreferrer'
+          >
+            {aIcon.icon}
+          </a>
+        );
+      })}
       | <b>FrasNym</b> &copy; {new Date().getFullYear()}
     </Container>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
