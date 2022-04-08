@@ -1,4 +1,4 @@
-export type ColorPallete = {
+export type ColorPallet = {
   background: string;
   color: string;
 };

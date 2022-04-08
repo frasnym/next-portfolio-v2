@@ -39,7 +39,7 @@ const Code: NextPage = () => {
               'Redis',
               'Firebase',
             ]}
-            colorPalletes={COLOR_PALLETES[0]}
+            colorPallets={COLOR_PALLETES[0]}
           />
         </p>
         <p>
@@ -48,7 +48,7 @@ const Code: NextPage = () => {
           think it&apos;s enough to make a small application.
           <SkillsBox
             skills={['ReactJS', 'NextJS', 'Flutter', 'TailwindCSS']}
-            colorPalletes={COLOR_PALLETES[1]}
+            colorPallets={COLOR_PALLETES[1]}
           />
         </p>
         <p>
@@ -56,7 +56,7 @@ const Code: NextPage = () => {
           practices and more that help me when developing apps.
           <SkillsBox
             skills={['Git', 'Docker', 'Unit Testing', 'Message Queue', 'gRPC']}
-            colorPalletes={COLOR_PALLETES[2]}
+            colorPallets={COLOR_PALLETES[2]}
           />
         </p>
       </Container>
