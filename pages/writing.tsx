@@ -2,7 +2,6 @@ import type { NextPage } from 'next';
 import { Emoji } from 'react-component-utility';
 import styled from 'styled-components';
 import DefaultLayout from '../components/layouts/default-layout';
-import { COLOR_PALLETES } from '../components/utils/contant';
 
 const Container = styled.article`
   text-align: left;
