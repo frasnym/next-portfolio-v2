@@ -29,6 +29,12 @@ const DefaultLayout: NextPage<Props> = function (props) {
           content='nyoman, frastyawan, frasnym, portfolio, backend, software, developer, golang, go, javascript'
         />
 
+        {/* Google */}
+        <meta
+          name='google-site-verification'
+          content='MOvO1VjEQWB6oyrmzVFy5pKYoHXBv_2T1LYi7y-djb8'
+        />
+
         {/* Open Graph / Facebook */}
         <meta property='og:type' content='website' />
         <meta property='og:url' content='https://frasnym.tech/' />
