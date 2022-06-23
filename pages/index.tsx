@@ -1,14 +1,14 @@
-import type { NextPage } from 'next'
+import type { NextPage } from 'next';
 import Body from '../components/home-page/body';
 import Header from '../components/home-page/header';
 import MediaSocial from '../components/home-page/media-social';
 import Quote from '../components/home-page/quote';
-import DefaultLayout from '../components/layouts/default-layout';
+import { DefaultLayout } from '../components/layouts/DefaultLayout';
 import Separator from '../components/ui/separator';
 
 const Home: NextPage = () => {
   return (
-    <DefaultLayout title='Home'>
+    <DefaultLayout title='Start to see my magic here'>
       <Header />
       <Separator />
       <Quote />
@@ -16,7 +16,7 @@ const Home: NextPage = () => {
       <Body />
       <MediaSocial />
     </DefaultLayout>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

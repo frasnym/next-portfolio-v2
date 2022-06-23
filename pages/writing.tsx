@@ -1,11 +1,11 @@
 import type { NextPage } from 'next';
 import { Emoji } from 'react-component-utility';
 import styled from 'styled-components';
-import DefaultLayout from '../components/layouts/default-layout';
+import { DefaultLayout } from '../components/layouts/DefaultLayout';
 import { ArticleList } from '../components/writing-page/Articles/List';
 import { ArticleDevTo } from '../types';
 
-export interface WritingProps {
+export interface Props {
   articles: ArticleDevTo[];
 }
 
@@ -22,9 +22,9 @@ const Container = styled.article`
   }
 `;
 
-const Writing: NextPage<WritingProps> = ({ articles }) => {
+const Writing: NextPage<Props> = ({ articles }) => {
   return (
-    <DefaultLayout title='Writing'>
+    <DefaultLayout title='A personal note to help me and others'>
       <Container>
         <p>
           &quot;I love to write&quot;, maybe not <Emoji symbol='😅' />. Usually
