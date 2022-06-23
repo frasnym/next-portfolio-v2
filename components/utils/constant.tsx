@@ -8,7 +8,7 @@ import {
 } from 'react-icons/fa';
 import { ColorPallet } from '../../types';
 
-export const MEDIA_SOCIAL_LINKS = [
+export const SOCIAL_MEDIA_LINKS = [
   {
     href: 'mailto:frastyawan.nym@gmail.com',
     icon: <FaRegEnvelope />,

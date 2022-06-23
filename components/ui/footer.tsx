@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import styled from 'styled-components';
-import { MEDIA_SOCIAL_LINKS } from '../utils/constant';
+import { SOCIAL_MEDIA_LINKS } from '../utils/constant';
 
 const Container = styled.footer`
   text-align: right;
@@ -15,7 +15,7 @@ const Footer: NextPage = () => {
   return (
     <Container>
       <hr />
-      {MEDIA_SOCIAL_LINKS.map((aIcon) => {
+      {SOCIAL_MEDIA_LINKS.map((aIcon) => {
         return (
           <a
             key={aIcon.href}
