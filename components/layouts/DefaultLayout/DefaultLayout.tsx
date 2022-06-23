@@ -10,39 +10,30 @@ type Props = {
 };
 
 const DefaultLayout: NextPage<Props> = function (props) {
+  const metaTitle = `${props.title} by Nyoman Frastyawan`;
+  const metaDescription = `${metaTitle}. Working on backend software developer with Golang and Javascript.`;
+
   return (
     <Container>
       <NavBar />
       <Head>
-        <title>{props.title} | FrasNym</title>
+        <title>{props.title} | Nyoman Frastyawan</title>
         <link rel='shortcut icon' href='/favicon.ico' />
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
 
         {/* Primary Meta Tags */}
-        <meta
-          name='title'
-          content='Nyoman Frastyawan (FrasNym) - Software Engineer'
-        />
-        <meta
-          name='description'
-          content='Indonesian 🇮🇩 Backend Developer. At your service with Golang and Javascript.'
-        />
+        <meta name='title' content={metaTitle} />
+        <meta name='description' content={metaDescription} />
         <meta
           name='keywords'
-          content='nyoman frastyawan, frasnym, frasnym portfolio, frasnym developer, frasnym freelance'
+          content='nyoman, frastyawan, frasnym, portfolio, backend, software, developer, golang, go, javascript'
         />
 
         {/* Open Graph / Facebook */}
         <meta property='og:type' content='website' />
         <meta property='og:url' content='https://frasnym.tech/' />
-        <meta
-          property='og:title'
-          content='Nyoman Frastyawan (FrasNym) - Software Engineer'
-        />
-        <meta
-          property='og:description'
-          content='Indonesian 🇮🇩 Backend Developer. At your service with Golang and Javascript.'
-        />
+        <meta property='og:title' content={metaTitle} />
+        <meta property='og:description' content={metaDescription} />
         <meta
           property='og:image'
           content='https://raw.githubusercontent.com/frasnym/next-portfolio-v2/main/public/images/avatar.jpg'
@@ -53,14 +44,8 @@ const DefaultLayout: NextPage<Props> = function (props) {
         {/* Twitter */}
         <meta property='twitter:card' content='summary_large_image' />
         <meta property='twitter:url' content='https://frasnym.tech/' />
-        <meta
-          property='twitter:title'
-          content='Nyoman Frastyawan (FrasNym) - Software Engineer'
-        />
-        <meta
-          property='twitter:description'
-          content='Indonesian 🇮🇩 Backend Developer. At your service with Golang and Javascript.'
-        />
+        <meta property='twitter:title' content={metaTitle} />
+        <meta property='twitter:description' content={metaDescription} />
         <meta
           property='twitter:image'
           content='https://raw.githubusercontent.com/frasnym/next-portfolio-v2/main/public/images/avatar.jpg'
