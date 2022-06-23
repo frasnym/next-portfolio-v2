@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import styled from 'styled-components';
 import SkillsBox from '../components/code-page/skills-box';
-import DefaultLayout from '../components/layouts/default-layout';
+import { DefaultLayout } from '../components/layouts/DefaultLayout';
 import { COLOR_PALLETES } from '../components/utils/constant';
 
 const Container = styled.article`
@@ -14,7 +14,7 @@ const Container = styled.article`
 
 const Code: NextPage = () => {
   return (
-    <DefaultLayout title='Code'>
+    <DefaultLayout title='Summary of my developer magic'>
       <Container>
         <p>
           I have been in this programming field for more than 4 years. I have
