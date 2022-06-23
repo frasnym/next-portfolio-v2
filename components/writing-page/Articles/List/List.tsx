@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import styled from 'styled-components';
-import { WritingProps } from '../../../../pages/writing';
+import { Props as WritingProps } from '../../../../pages/writing';
 import { ArticleCard } from '../Card';
 
 const Container = styled.div`
