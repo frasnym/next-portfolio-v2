@@ -1,10 +1,10 @@
 import type { NextPage } from 'next';
-import Body from '../components/home-page/body';
-import Header from '../components/home-page/header';
-import MediaSocial from '../components/home-page/media-social';
-import Quote from '../components/home-page/quote';
+import { Body } from '../components/home-page/Body';
+import { Header } from '../components/home-page/Header';
+import { Quote } from '../components/home-page/Quote';
+import { SocialMediaLinks } from '../components/home-page/SocialMediaLinks';
 import { DefaultLayout } from '../components/layouts/DefaultLayout';
-import Separator from '../components/ui/separator';
+import { Separator } from '../components/ui/Separator';
 
 const Home: NextPage = () => {
   return (
@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       <Quote />
       <Separator />
       <Body />
-      <MediaSocial />
+      <SocialMediaLinks />
     </DefaultLayout>
   );
 };

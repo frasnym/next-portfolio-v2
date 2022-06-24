@@ -1,6 +1,5 @@
 import type { NextPage } from 'next';
 import { Emoji } from 'react-component-utility';
-import styled from 'styled-components';
 import { DefaultLayout } from '../components/layouts/DefaultLayout';
 import { ArticleList } from '../components/writing-page/Articles/List';
 import { ArticleDevTo } from '../types';
@@ -9,38 +8,32 @@ export interface Props {
   articles: ArticleDevTo[];
 }
 
-const Container = styled.article`
-  text-align: left;
-  font-size: 1.2rem;
-  & p {
-    padding: 0.8rem 0.8rem 0 0.8rem;
-    & a {
-      color: blue;
-      text-decoration: underline;
-      font-weight: bold;
-    }
-  }
-`;
+const classNameP = 'py-3';
 
 const Writing: NextPage<Props> = ({ articles }) => {
   return (
     <DefaultLayout title='A personal note to help me and others'>
-      <Container>
-        <p>
+      <article className='text-xl text-left'>
+        <p className={classNameP}>
           &quot;I love to write&quot;, maybe not <Emoji symbol='😅' />. Usually
           I write to take a note so I don&apos;t forget about things I just
           learned.
         </p>
-        <p>
+        <p className={classNameP}>
           I write about programming things then publish it on{' '}
-          <a href='http://dev.to/frasnym' target='_blank' rel='noreferrer'>
+          <a
+            className='font-bold underline text-theme-secondary'
+            href='http://dev.to/frasnym'
+            target='_blank'
+            rel='noreferrer'
+          >
             dev.to
           </a>
           . So if anyone coincidentally find that article useful, it is my
           pleasure to be able to help.
         </p>
         <ArticleList articles={articles} />
-      </Container>
+      </article>
     </DefaultLayout>
   );
 };
@@ -51,14 +44,16 @@ const Writing: NextPage<Props> = ({ articles }) => {
 export async function getStaticProps() {
   // Call an external API endpoint to get posts.
   // You can use any data fetching library
-  const res = await fetch('https://dev.to/api/articles?username=frasnym');
-  const articles = await res.json();
 
-  return {
-    props: {
-      articles,
-    },
-  };
+  try {
+    const res = await fetch('https://dev.to/api/articles?username=frasnym');
+    const articles = await res.json();
+
+    return { props: { articles } };
+  } catch (error) {
+    console.error(error);
+    return { props: { articles: [] } };
+  }
 }
 
 export default Writing;

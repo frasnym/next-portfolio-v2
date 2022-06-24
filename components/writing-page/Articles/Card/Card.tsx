@@ -1,76 +1,42 @@
 import type { NextPage } from 'next';
 import { Emoji } from 'react-component-utility';
-import styled from 'styled-components';
+import styles from './Card.module.css';
 import { ArticleDevTo } from '../../../../types';
-
-const Container = styled.div`
-  text-align: left;
-  font-size: 1.5rem;
-  border: 2px solid;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  & h5 {
-    margin: 0;
-  }
-`;
-
-const AnchorToArticle = styled.a`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-const CardBody = styled.div`
-  font-size: 1rem;
-  & div:nth-child(1) {
-    margin: 0 1rem 0 0;
-  }
-  & div {
-    display: inline-block;
-    margin: 0 1rem;
-    & span:first-child {
-      margin-right: 0.2rem;
-    }
-  }
-`;
-
-const TagList = styled.div`
-  & span:not(:first-child):not(:last-child):after {
-    content: ', ';
-  }
-`;
-
-interface CardProps {
+interface Props {
   article: ArticleDevTo;
 }
 
-const Card: NextPage<CardProps> = ({ article }) => {
+const Card: NextPage<Props> = ({ article }) => {
   return (
-    <Container>
-      <AnchorToArticle href={article.url} target={'_blank'} rel={'noreferrer'}>
+    <div className='p-4 my-4 text-2xl text-left border-2 border-solid border-theme-primary'>
+      <a
+        className='flex flex-row items-center justify-between'
+        href={article.url}
+        target={'_blank'}
+        rel={'noreferrer'}
+      >
         <div>
-          <h5>{article.title}</h5>
-          <CardBody>
-            <TagList>
+          <h5 className='font-bold text-md'>{article.title}</h5>
+          <div className='text-base'>
+            <div className={`${styles['tag-list']} mr-4 inline-block`}>
               <Emoji symbol='🏷' />
               {article.tag_list.map((tag) => (
                 <span key={tag}>{tag}</span>
               ))}
-            </TagList>
-            <div>
+            </div>
+            <div className='inline-block mx-4'>
               <Emoji symbol='⏱' />
               {`~ ${article.reading_time_minutes}min`}
             </div>
-            <div>
+            <div className='inline-block mx-4'>
               <Emoji symbol='🌟' />
               {article.positive_reactions_count}
             </div>
-          </CardBody>
+          </div>
         </div>
         <Emoji symbol='🚀' />
-      </AnchorToArticle>
-    </Container>
+      </a>
+    </div>
   );
 };
 

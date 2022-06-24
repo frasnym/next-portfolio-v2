@@ -8,7 +8,7 @@ import {
 } from 'react-icons/fa';
 import { ColorPallet } from '../../types';
 
-export const MEDIA_SOCIAL_LINKS = [
+export const SOCIAL_MEDIA_LINKS = [
   {
     href: 'mailto:frastyawan.nym@gmail.com',
     icon: <FaRegEnvelope />,
@@ -35,7 +35,7 @@ export const MEDIA_SOCIAL_LINKS = [
   },
 ];
 
-export const COLOR_PALLETES: ColorPallet[][] = [
+export const COLOR_PALLETS: ColorPallet[][] = [
   [
     { background: '#005f73', color: 'var(--color-text-light)' },
     { background: '#0a9396', color: 'var(--color-text-light)' },
@@ -70,4 +70,23 @@ export const COLOR_PALLETES: ColorPallet[][] = [
     { background: '#577590', color: 'var(--color-text-light)' },
     { background: '#277da1', color: 'var(--color-text-light)' },
   ],
+];
+
+export const PAGE_NAV = [
+  {
+    title: 'Home',
+    href: '/',
+  },
+  {
+    title: 'About',
+    href: '/about-me',
+  },
+  {
+    title: 'Code',
+    href: '/code',
+  },
+  {
+    title: 'Writing',
+    href: '/writing',
+  },
 ];
