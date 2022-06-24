@@ -19,7 +19,7 @@ const NavBar: NextPage = () => {
   return (
     <div className='fixed top-0 left-0 z-50 flex items-center justify-between w-full p-4 bg-theme-primary-transparent'>
       <div className='hidden w-20 md:block'></div>
-      <div className='block md:hidden'>
+      <aside className='block md:hidden'>
         <button
           className='p-4 rounded-md bg-theme-secondary'
           onClick={() => setShowMenu(!showMenu)}
@@ -31,7 +31,7 @@ const NavBar: NextPage = () => {
             {linksElement}
           </nav>
         ) : null}
-      </div>
+      </aside>
       <nav className='hidden md:block'>{linksElement}</nav>
       <ThemeToggle />
     </div>
