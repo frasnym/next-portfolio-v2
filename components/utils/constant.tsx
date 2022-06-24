@@ -35,7 +35,7 @@ export const SOCIAL_MEDIA_LINKS = [
   },
 ];
 
-export const COLOR_PALLETES: ColorPallet[][] = [
+export const COLOR_PALLETS: ColorPallet[][] = [
   [
     { background: '#005f73', color: 'var(--color-text-light)' },
     { background: '#0a9396', color: 'var(--color-text-light)' },
