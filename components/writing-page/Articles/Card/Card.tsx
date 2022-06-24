@@ -8,7 +8,7 @@ interface Props {
 
 const Card: NextPage<Props> = ({ article }) => {
   return (
-    <div className='p-4 my-4 text-2xl text-left border-2 border-solid'>
+    <div className='p-4 my-4 text-2xl text-left border-2 border-solid border-theme-primary'>
       <a
         className='flex flex-row items-center justify-between'
         href={article.url}

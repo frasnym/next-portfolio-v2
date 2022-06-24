@@ -3,7 +3,7 @@ import { SOCIAL_MEDIA_LINKS } from '../../utils/constant';
 
 const SocialMediaLinks: NextPage = () => {
   return (
-    <section className='flex justify-center'>
+    <section className='flex justify-center my-4'>
       {SOCIAL_MEDIA_LINKS.map((aIcon) => (
         <a
           key={aIcon.href}

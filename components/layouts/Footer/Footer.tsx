@@ -3,7 +3,7 @@ import { SOCIAL_MEDIA_LINKS } from '../../utils/constant';
 
 const Footer: NextPage = () => {
   return (
-    <footer className='py-4 divide-y-2 divide-solid divide-neutral-400'>
+    <footer className='py-4 divide-y-2 divide-solid divide-theme-primary'>
       <div>{''}</div>
       <div className='flex items-center justify-end pt-3'>
         {SOCIAL_MEDIA_LINKS.map((aIcon) => {

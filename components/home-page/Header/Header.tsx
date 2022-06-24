@@ -19,7 +19,7 @@ const Header: NextPage = () => {
           <span className='block text-less-big'>Nym</span>
         </h1>
       </div>
-      <h2 className='my-3 text-2xl font-bold'>
+      <h2 className='my-4 text-2xl font-bold'>
         Indonesian{' '}
         <span className='align-sub'>
           <Image

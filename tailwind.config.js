@@ -23,6 +23,14 @@ module.exports = {
         'theme-primary': 'var(--color-text-primary)',
         'theme-secondary': 'var(--color-text-secondary)',
       },
+      borderColor: {
+        'theme-primary': 'var(--color-text-primary)',
+        'theme-secondary': 'var(--color-text-secondary)',
+      },
+      divideColor: {
+        'theme-primary': 'var(--color-text-primary)',
+        'theme-secondary': 'var(--color-text-secondary)',
+      },
     },
   },
   plugins: [],
