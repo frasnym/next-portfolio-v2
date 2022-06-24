@@ -6,7 +6,7 @@ import { ThemeToggle } from '../../ui/nav-bar/ThemeToggle';
 import { PAGE_NAV } from '../../utils/constant';
 
 const NavBar: NextPage = () => {
-  const [showMenu, setShowMenu] = useState(true);
+  const [showMenu, setShowMenu] = useState(false);
 
   const linksElement = PAGE_NAV.map((nav) => (
     <Link key={nav.title} href={nav.href}>

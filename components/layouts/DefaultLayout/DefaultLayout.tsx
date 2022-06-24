@@ -13,7 +13,7 @@ const DefaultLayout: NextPage<Props> = function (props) {
   const metaDescription = `${metaTitle}. Working on backend software developer with Golang and Javascript.`;
 
   return (
-    <div className='max-w-3xl pt-20 mx-auto my-0 text-center'>
+    <main className='max-w-3xl pt-20 mx-2 my-0 text-center'>
       <NavBar />
       <Head>
         <title>{props.title} | Nyoman Frastyawan</title>
@@ -60,7 +60,7 @@ const DefaultLayout: NextPage<Props> = function (props) {
       </Head>
       <div className='p-5'>{props.children}</div>
       <Footer />
-    </div>
+    </main>
   );
 };
 
