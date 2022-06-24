@@ -2,6 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+body,
+body[data-theme='light'] {
+  --color-text-primary: #470d21;
+  --color-text-secondary: #9c0f48;
+  --color-bg-primary: #f9e4d4;
+  --color-bg-primary-transparent: #f9e4d490;
+  --color-bg-toggle: #d67d3e;
+}
+
+body[data-theme='dark'] {
+  --color-text-primary: #ecdbba;
+  --color-text-secondary: #c84b31;
+  --color-bg-primary: #191919;
+  --color-bg-primary-transparent: #19191990;
+  --color-bg-toggle: #c84b31;
+}
+
+@layer base {
+  [data-theme='default'] {
+    --color-text-primary: #470d21;
+    --color-text-secondary: #9c0f48;
+    --color-bg-primary: #f9e4d4;
+    --color-bg-primary-transparent: #f9e4d490;
+    --color-bg-secondary: #d67d3e;
+  }
+
+  [data-theme='dark'] {
+    --color-text-primary: #ecdbba;
+    --color-text-secondary: #c84b31;
+    --color-bg-primary: #191919;
+    --color-bg-primary-transparent: #19191990;
+    --color-bg-secondary: #c84b31;
+  }
+}
+
 :root {
   --on: 0;
   --nav-open: 0;
@@ -27,17 +62,29 @@
   --min-control-size: 48px;
   --nav-height: 80px;
   --nav-width: var(--sz-13);
-  --bg: hsl(calc(200 - var(--on)*160), calc((20 + var(--on)*50)*1%), calc((10 + var(--on)*80)*1%));
-  --bg-2: hsl(calc(200 - var(--on)*160), calc((20 + var(--on)*50)*1%), calc(var(--on)*100*1%));
-  --bg-3: hsl(calc(200 - var(--on)*160), calc((20 + var(--on)*50)*1%), calc((3 + var(--on)*94)*1%));
-  --color: hsl(0, 0%, calc((96 - var(--on)*80)*1%));
-  --color-2: hsl(0, 0%, calc((70 - var(--on)*35)*1%));
-  --border: hsla(0, 0%, calc((100 - var(--on)*90)*1%), 0.5);
+  --bg: hsl(
+    calc(200 - var(--on) * 160),
+    calc((20 + var(--on) * 50) * 1%),
+    calc((10 + var(--on) * 80) * 1%)
+  );
+  --bg-2: hsl(
+    calc(200 - var(--on) * 160),
+    calc((20 + var(--on) * 50) * 1%),
+    calc(var(--on) * 100 * 1%)
+  );
+  --bg-3: hsl(
+    calc(200 - var(--on) * 160),
+    calc((20 + var(--on) * 50) * 1%),
+    calc((3 + var(--on) * 94) * 1%)
+  );
+  --color: hsl(0, 0%, calc((96 - var(--on) * 80) * 1%));
+  --color-2: hsl(0, 0%, calc((70 - var(--on) * 35) * 1%));
+  --border: hsla(0, 0%, calc((100 - var(--on) * 90) * 1%), 0.5);
   --accent: #dd3c3c;
   --accent-2: rgba(221, 60, 60, 0.5);
 
-  --color-text-light: #ECDBBA;
-  --color-text-dark: #470D21;
+  --color-text-light: #ecdbba;
+  --color-text-dark: #470d21;
 }
 
 html,
@@ -48,23 +95,6 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
-}
-
-body,
-body[data-theme="light"] {
-  --color-text-primary: #470D21;
-  --color-text-secondary: #9C0F48;
-  --color-bg-primary: #F9E4D4;
-  --color-bg-primary-transparent: #F9E4D490;
-  --color-bg-toggle: #D67D3E;
-}
-
-body[data-theme="dark"] {
-  --color-text-primary: #ECDBBA;
-  --color-text-secondary: #2D4263;
-  --color-bg-primary: #191919;
-  --color-bg-primary-transparent: #19191990;
-  --color-bg-toggle: #C84B31;
 }
 
 body {

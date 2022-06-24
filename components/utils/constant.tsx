@@ -71,3 +71,22 @@ export const COLOR_PALLETES: ColorPallet[][] = [
     { background: '#277da1', color: 'var(--color-text-light)' },
   ],
 ];
+
+export const PAGE_NAV = [
+  {
+    title: 'Home',
+    href: '/',
+  },
+  {
+    title: 'About',
+    href: '/about-me',
+  },
+  {
+    title: 'Code',
+    href: '/code',
+  },
+  {
+    title: 'Writing',
+    href: '/writing',
+  },
+];

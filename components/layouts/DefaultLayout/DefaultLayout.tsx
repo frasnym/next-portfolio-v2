@@ -1,8 +1,7 @@
 import Head from 'next/head';
 import { NextPage } from 'next';
-import NavBar from '../../ui/navbar';
-import Footer from '../../ui/footer';
-import { Container, PageContainer } from './DefaultLayout.styled';
+import { Footer } from '../Footer';
+import { NavBar } from '../NavBar';
 
 type Props = {
   children: React.ReactNode;
@@ -14,7 +13,7 @@ const DefaultLayout: NextPage<Props> = function (props) {
   const metaDescription = `${metaTitle}. Working on backend software developer with Golang and Javascript.`;
 
   return (
-    <div className='text-center pt-20 max-w-3xl my-0 mx-auto'>
+    <div className='max-w-3xl pt-20 mx-auto my-0 text-center'>
       <NavBar />
       <Head>
         <title>{props.title} | Nyoman Frastyawan</title>
