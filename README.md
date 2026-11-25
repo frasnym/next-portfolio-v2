@@ -14,7 +14,7 @@ A portfolio website to introduce myself to the world 👋. Visit [frasnym.tech](
 
 ## Requirements
 
-Node.js 20.9 or newer (22 recommended).
+Node.js 20.9 or newer (22 recommended) and npm 10 — the lockfile is maintained with npm 10.9.11, which is what CI uses.
 
 ## Getting started
 

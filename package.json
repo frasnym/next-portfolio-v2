@@ -1,6 +1,10 @@
 {
   "name": "next-portfolio-v2",
   "private": true,
+  "packageManager": "npm@10.9.11",
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -23,7 +27,7 @@
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.3.0",
     "autoprefixer": "^10.7.0",
-    "eslint": "^10.15.0",
+    "eslint": "^9.39.5",
     "eslint-config-next": "^16.4.6",
     "jsdom": "^29.1.1",
     "postcss": "^8.5.33",
