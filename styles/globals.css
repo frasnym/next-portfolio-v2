@@ -13,10 +13,10 @@
 
   [data-theme='dark'] {
     --color-text-primary: #ecdbba;
-    --color-text-secondary: #c84b31;
+    --color-text-secondary: #dd6045;
     --color-bg-primary: #191919;
     --color-bg-primary-transparent: #19191990;
-    --color-bg-secondary: #c84b31;
+    --color-bg-secondary: #a63a24;
   }
 }
 
