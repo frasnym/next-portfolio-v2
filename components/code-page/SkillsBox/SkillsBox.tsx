@@ -14,8 +14,9 @@ const SkillsBox: NextPage<Props> = function (props) {
           key={skill}
           className='inline-block p-4 m-1 shadow-sm cursor-default hover:rotate-12'
           style={{
-            color: props.colorPallets[index].color,
-            background: props.colorPallets[index].background,
+            color: props.colorPallets[index % props.colorPallets.length].color,
+            background:
+              props.colorPallets[index % props.colorPallets.length].background,
           }}
         >
           {skill}

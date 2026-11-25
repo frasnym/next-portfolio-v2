@@ -10,6 +10,8 @@ const Footer: NextPage = () => {
           return (
             <a
               key={aIcon.href}
+              aria-label={aIcon.label}
+              title={aIcon.label}
               className='px-1'
               href={aIcon.href}
               target='_blank'

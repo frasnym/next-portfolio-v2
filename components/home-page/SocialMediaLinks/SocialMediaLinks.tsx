@@ -7,6 +7,8 @@ const SocialMediaLinks: NextPage = () => {
       {SOCIAL_MEDIA_LINKS.map((aIcon) => (
         <a
           key={aIcon.href}
+          aria-label={aIcon.label}
+          title={aIcon.label}
           className='inline m-2 text-4xl'
           href={aIcon.href}
           target='_blank'

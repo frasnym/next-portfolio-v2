@@ -54,8 +54,7 @@ const AboutMe: NextPage = () => {
               />
             </div>
           ))}
-          <br />
-          <text className='text-base'>This is some photos of Bali</text>
+          <span className='block text-base'>This is some photos of Bali</span>
         </div>
         <p className={classNameP}>
           After 3 years working with PHP, I want to develop my career and start

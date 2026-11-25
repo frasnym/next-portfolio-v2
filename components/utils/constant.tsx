@@ -11,26 +11,32 @@ import { ColorPallet } from '../../types';
 export const SOCIAL_MEDIA_LINKS = [
   {
     href: 'mailto:frastyawan.nym@gmail.com',
+    label: 'Email',
     icon: <FaRegEnvelope />,
   },
   {
     href: 'https://www.linkedin.com/in/frasnym/',
+    label: 'LinkedIn',
     icon: <FaLinkedinIn />,
   },
   {
     href: 'https://github.com/frasnym',
+    label: 'GitHub',
     icon: <FaGithub />,
   },
   {
     href: 'https://twitter.com/intent/follow?screen_name=frasnym',
+    label: 'Twitter',
     icon: <FaTwitter />,
   },
   {
     href: 'https://dev.to/frasnym/',
+    label: 'DEV Community',
     icon: <FaDev />,
   },
   {
     href: 'https://play.google.com/store/apps/developer?id=FrastyawanNym',
+    label: 'Google Play',
     icon: <FaGooglePlay />,
   },
 ];
