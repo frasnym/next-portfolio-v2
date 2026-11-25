@@ -49,10 +49,10 @@ export async function getStaticProps() {
     const res = await fetch('https://dev.to/api/articles?username=frasnym');
     const articles = await res.json();
 
-    return { props: { articles } };
+    return { props: { articles }, revalidate: 3600 };
   } catch (error) {
     console.error(error);
-    return { props: { articles: [] } };
+    return { props: { articles: [] }, revalidate: 3600 };
   }
 }
 
