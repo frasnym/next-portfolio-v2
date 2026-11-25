@@ -1,5 +1,4 @@
 import type { NextPage } from 'next';
-import { Emoji } from 'react-component-utility';
 import { DefaultLayout } from '../components/layouts/DefaultLayout';
 import { ArticleList } from '../components/writing-page/Articles/List';
 import { ArticleDevTo } from '../types';
@@ -15,7 +14,7 @@ const Writing: NextPage<Props> = ({ articles }) => {
     <DefaultLayout title='A personal note to help me and others'>
       <article className='text-xl text-left'>
         <p className={classNameP}>
-          &quot;I love to write&quot;, maybe not <Emoji symbol='😅' />. Usually
+          &quot;I love to write&quot;, maybe not 😅. Usually
           I write to take a note so I don&apos;t forget about things I just
           learned.
         </p>

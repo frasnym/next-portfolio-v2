@@ -1,5 +1,4 @@
 import type { NextPage } from 'next';
-import { Emoji } from 'react-component-utility';
 import styles from './Card.module.css';
 import { ArticleDevTo } from '../../../../types';
 interface Props {
@@ -19,22 +18,20 @@ const Card: NextPage<Props> = ({ article }) => {
           <h5 className='font-bold text-md'>{article.title}</h5>
           <div className='text-base'>
             <div className={`${styles['tag-list']} mr-4 inline-block`}>
-              <Emoji symbol='🏷' />
+              🏷{' '}
               {article.tag_list.map((tag) => (
                 <span key={tag}>{tag}</span>
               ))}
             </div>
             <div className='inline-block mx-4'>
-              <Emoji symbol='⏱' />
-              {`~ ${article.reading_time_minutes}min`}
+              ⏱ {`~ ${article.reading_time_minutes}min`}
             </div>
             <div className='inline-block mx-4'>
-              <Emoji symbol='🌟' />
-              {article.positive_reactions_count}
+              🌟 {article.positive_reactions_count}
             </div>
           </div>
         </div>
-        <Emoji symbol='🚀' />
+        🚀
       </a>
     </div>
   );

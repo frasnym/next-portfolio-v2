@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  turbopack: {
+    root: __dirname,
+  },
   images: {
-    domains: ['i.ibb.co'],
+    remotePatterns: [{ protocol: 'https', hostname: 'i.ibb.co' }],
     formats: ['image/webp'],
   },
 };

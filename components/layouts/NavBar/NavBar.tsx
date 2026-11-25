@@ -7,22 +7,19 @@ import { ThemeToggle } from '../../ui/nav-bar/ThemeToggle';
 import { PAGE_NAV } from '../../utils/constant';
 
 const NavBar: NextPage = () => {
-  const [showMenu, setShowMenu] = useState(false);
+  const [menuPath, setMenuPath] = useState<string | null>(null);
   const menuRef = useRef<HTMLElement>(null);
   const router = useRouter();
-
-  useEffect(() => {
-    setShowMenu(false);
-  }, [router.asPath]);
+  const showMenu = menuPath === router.asPath;
 
   useEffect(() => {
     if (!showMenu) return;
 
     const closeOnEscape = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') setShowMenu(false);
+      if (event.key === 'Escape') setMenuPath(null);
     };
     const closeOnOutsideClick = (event: MouseEvent) => {
-      if (!menuRef.current?.contains(event.target as Node)) setShowMenu(false);
+      if (!menuRef.current?.contains(event.target as Node)) setMenuPath(null);
     };
 
     document.addEventListener('keydown', closeOnEscape);
@@ -34,14 +31,14 @@ const NavBar: NextPage = () => {
   }, [showMenu]);
 
   const linksElement = PAGE_NAV.map((nav) => (
-    <Link key={nav.title} href={nav.href}>
-      <a
-        className={`inline-block px-2 text-xl font-bold ease-in-out hover:text-theme-secondary ${
-          router.pathname === nav.href ? 'text-theme-secondary' : 'text-theme-primary'
-        }`}
-      >
-        {nav.title}
-      </a>
+    <Link
+      key={nav.title}
+      href={nav.href}
+      className={`inline-block px-2 text-xl font-bold ease-in-out hover:text-theme-secondary ${
+        router.pathname === nav.href ? 'text-theme-secondary' : 'text-theme-primary'
+      }`}
+    >
+      {nav.title}
     </Link>
   ));
 
@@ -54,7 +51,7 @@ const NavBar: NextPage = () => {
           aria-label={showMenu ? 'Close navigation menu' : 'Open navigation menu'}
           aria-expanded={showMenu}
           aria-controls={showMenu ? 'mobile-nav' : undefined}
-          onClick={() => setShowMenu(!showMenu)}
+          onClick={() => setMenuPath(showMenu ? null : router.asPath)}
         >
           <FaHamburger />
         </button>

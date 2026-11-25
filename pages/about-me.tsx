@@ -1,6 +1,5 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
-import { Emoji } from 'react-component-utility';
 import { DefaultLayout } from '../components/layouts/DefaultLayout';
 
 const baliImages = [
@@ -22,7 +21,7 @@ const AboutMe: NextPage = () => {
       <article className='text-xl text-left'>
         <p className={classNameP}>
           <b>
-            Hi! <Emoji symbol='👋' />
+            Hi! 👋
           </b>
           , I love building new things with code and traveling with the
           earnings.
@@ -71,7 +70,7 @@ const AboutMe: NextPage = () => {
         <p className={classNameP}>
           Lastly, if you need help building something to achieve your goals with
           code or just want to know more about me. Feel free to contact me on
-          any of my social media <Emoji symbol='😉' />.
+          any of my social media 😉.
         </p>
       </article>
     </DefaultLayout>

@@ -41,7 +41,7 @@
   transition: transform 0.25s ease-in-out;
 }
 
-.toggle-thumb-dark {
+[data-theme='dark'] .toggle-thumb {
   transform: translate3d(
     calc(var(--toggle-width) - var(--toggle-height)),
     0,
@@ -49,6 +49,6 @@
   );
 }
 
-.toggle-thumb-light {
+[data-theme='light'] .toggle-thumb {
   transform: none;
 }
