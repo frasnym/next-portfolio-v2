@@ -1,7 +1,6 @@
-import type { NextPage } from 'next';
 import styles from './Quote.module.css';
 
-const Quote: NextPage = () => {
+const Quote = () => {
   return (
     <section className={styles.quote}>
       <p className='inline font-bold tracking-wide uppercase'>

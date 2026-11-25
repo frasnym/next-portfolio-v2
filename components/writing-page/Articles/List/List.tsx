@@ -1,8 +1,7 @@
-import type { NextPage } from 'next';
-import { Props as WritingProps } from '../../../../pages/writing';
+import type { WritingProps } from '../../../../types';
 import { ArticleCard } from '../Card';
 
-const List: NextPage<WritingProps> = ({ articles }) => {
+const List = ({ articles }: WritingProps) => {
   return (
     <div className='text-2xl text-center'>
       {articles.map((article) => (

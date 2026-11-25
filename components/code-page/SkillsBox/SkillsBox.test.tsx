@@ -18,11 +18,15 @@ describe('SkillsBox', () => {
     expect(screen.getByText('SQL')).toBeInTheDocument();
   });
 
-  it('cycles colors rather than crashing when skills outnumber colors', () => {
+  it('cycles colors without using divs that break paragraphs', () => {
     const palette = [{ background: 'rgb(1, 1, 1)', color: 'white' }];
 
-    render(<SkillsBox skills={['First', 'Second']} colorPallets={palette} />);
+    const { container } = render(
+      <SkillsBox skills={['First', 'Second']} colorPallets={palette} />
+    );
 
+    expect(container.firstElementChild?.tagName).toBe('SPAN');
+    expect(screen.getByText('First').tagName).toBe('SPAN');
     expect(screen.getByText('First').style.background).toBe('rgb(1, 1, 1)');
     expect(screen.getByText('Second').style.background).toBe('rgb(1, 1, 1)');
   });

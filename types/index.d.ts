@@ -11,3 +11,7 @@ export type ArticleDevTo = {
   reading_time_minutes: number;
   tag_list: string[];
 };
+
+export type WritingProps = {
+  articles: ArticleDevTo[];
+};

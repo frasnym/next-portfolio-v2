@@ -1,4 +1,3 @@
-import { NextPage } from 'next';
 import { ColorPallet } from '../../../types';
 
 type Props = {
@@ -6,11 +5,11 @@ type Props = {
   colorPallets: ColorPallet[];
 };
 
-const SkillsBox: NextPage<Props> = function (props) {
+const SkillsBox = (props: Props) => {
   return (
-    <div className='flex flex-wrap justify-end my-2'>
+    <span className='flex flex-wrap justify-end my-2'>
       {props.skills.map((skill, index) => (
-        <div
+        <span
           key={skill}
           className='inline-block p-4 m-1 shadow-sm cursor-default hover:rotate-12'
           style={{
@@ -20,9 +19,9 @@ const SkillsBox: NextPage<Props> = function (props) {
           }}
         >
           {skill}
-        </div>
+        </span>
       ))}
-    </div>
+    </span>
   );
 };
 

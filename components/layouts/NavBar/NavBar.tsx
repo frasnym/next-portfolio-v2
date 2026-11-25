@@ -1,4 +1,3 @@
-import type { NextPage } from 'next';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useRef, useState } from 'react';
@@ -6,7 +5,7 @@ import { FaHamburger } from 'react-icons/fa';
 import { ThemeToggle } from '../../ui/nav-bar/ThemeToggle';
 import { PAGE_NAV } from '../../utils/constant';
 
-const NavBar: NextPage = () => {
+const NavBar = () => {
   const [menuPath, setMenuPath] = useState<string | null>(null);
   const menuRef = useRef<HTMLElement>(null);
   const router = useRouter();

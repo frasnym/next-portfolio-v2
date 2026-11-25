@@ -4,12 +4,12 @@ import { DefaultLayout } from '../components/layouts/DefaultLayout';
 
 const baliImages = [
   {
-    src: 'https://i.ibb.co/fYpKzSy/bali2.jpg',
-    alt: 'Photo of Bali 1',
+    src: '/images/bali-tanah-lot.jpg',
+    alt: 'Tanah Lot sea temple standing on rocks surrounded by waves',
   },
   {
-    src: 'https://i.ibb.co/t3K0qGn/bali1.jpg',
-    alt: 'Photo of Bali 2',
+    src: '/images/bali-ulun-danu.jpg',
+    alt: 'Ulun Danu Beratan temple reflected in the lake with mountains behind',
   },
 ];
 
@@ -44,13 +44,15 @@ const AboutMe: NextPage = () => {
         <div className='text-center'>
           {baliImages.map((img) => (
             <div key={img.src} className='inline-block px-3'>
-              <Image
-                className='rounded-md'
-                src={img.src}
-                alt={img.alt}
-                height={128}
-                width={160}
-              />
+              <div className='relative h-32 w-40'>
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  sizes='160px'
+                  className='rounded-md object-cover'
+                />
+              </div>
             </div>
           ))}
           <span className='block text-base'>This is some photos of Bali</span>

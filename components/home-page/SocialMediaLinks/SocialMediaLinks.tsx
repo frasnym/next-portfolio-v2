@@ -1,7 +1,6 @@
-import type { NextPage } from 'next';
 import { SOCIAL_MEDIA_LINKS } from '../../utils/constant';
 
-const SocialMediaLinks: NextPage = () => {
+const SocialMediaLinks = () => {
   return (
     <section className='flex justify-center my-4'>
       {SOCIAL_MEDIA_LINKS.map((aIcon) => (

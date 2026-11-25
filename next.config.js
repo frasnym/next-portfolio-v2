@@ -5,7 +5,6 @@ const nextConfig = {
     root: __dirname,
   },
   images: {
-    remotePatterns: [{ protocol: 'https', hostname: 'i.ibb.co' }],
     formats: ['image/webp'],
   },
 };

@@ -1,7 +1,6 @@
-import type { NextPage } from 'next';
 import styles from './ThemeToggle.module.css';
 
-const ThemeToggle: NextPage = () => {
+const ThemeToggle = () => {
   const changeTheme = () => {
     const nextTheme = document.body.dataset.theme === 'light' ? 'dark' : 'light';
     document.body.dataset.theme = nextTheme;

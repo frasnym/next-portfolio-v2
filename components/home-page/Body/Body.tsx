@@ -1,6 +1,4 @@
-import type { NextPage } from 'next';
-
-const Body: NextPage = () => {
+const Body = () => {
   return (
     <section>
       <div className='mb-4 text-2xl text-center'>

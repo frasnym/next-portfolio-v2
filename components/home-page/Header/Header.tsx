@@ -1,6 +1,4 @@
-import type { NextPage } from 'next';
-
-const Header: NextPage = () => {
+const Header = () => {
   return (
     <header className='text-center'>
       <h1 className='self-center flex-1 pb-10 font-bold leading-less-none'>

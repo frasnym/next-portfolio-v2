@@ -1,15 +1,11 @@
 import type { NextPage } from 'next';
 import { DefaultLayout } from '../components/layouts/DefaultLayout';
 import { ArticleList } from '../components/writing-page/Articles/List';
-import { ArticleDevTo } from '../types';
-
-export interface Props {
-  articles: ArticleDevTo[];
-}
+import type { WritingProps } from '../types';
 
 const classNameP = 'py-3';
 
-const Writing: NextPage<Props> = ({ articles }) => {
+const Writing: NextPage<WritingProps> = ({ articles }) => {
   return (
     <DefaultLayout title='A personal note to help me and others'>
       <article className='text-xl text-left'>
@@ -31,7 +27,11 @@ const Writing: NextPage<Props> = ({ articles }) => {
           . So if anyone coincidentally find that article useful, it is my
           pleasure to be able to help.
         </p>
-        <ArticleList articles={articles} />
+        {articles.length > 0 ? (
+          <ArticleList articles={articles} />
+        ) : (
+          <p className={classNameP}>No articles yet — check back later.</p>
+        )}
       </article>
     </DefaultLayout>
   );

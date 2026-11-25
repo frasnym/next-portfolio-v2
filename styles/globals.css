@@ -20,9 +20,12 @@
   }
 }
 
-:root {
-  --color-text-light: #ecdbba;
-  --color-text-dark: #470d21;
+@layer base {
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--color-text-secondary);
+    outline-offset: 3px;
+  }
 }
 
 html,

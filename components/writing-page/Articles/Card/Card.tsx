@@ -1,11 +1,10 @@
-import type { NextPage } from 'next';
 import styles from './Card.module.css';
 import { ArticleDevTo } from '../../../../types';
 interface Props {
   article: ArticleDevTo;
 }
 
-const Card: NextPage<Props> = ({ article }) => {
+const Card = ({ article }: Props) => {
   return (
     <div className='p-4 my-4 text-2xl text-left border-2 border-solid border-theme-primary'>
       <a

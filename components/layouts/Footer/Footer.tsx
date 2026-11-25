@@ -1,7 +1,6 @@
-import type { NextPage } from 'next';
 import { SOCIAL_MEDIA_LINKS } from '../../utils/constant';
 
-const Footer: NextPage = () => {
+const Footer = () => {
   return (
     <footer className='py-4 divide-y-2 divide-solid divide-theme-primary'>
       <div>{''}</div>

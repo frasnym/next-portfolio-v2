@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import { NextPage } from 'next';
 import { Footer } from '../Footer';
 import { NavBar } from '../NavBar';
 
@@ -8,7 +7,7 @@ type Props = {
   title: string;
 };
 
-const DefaultLayout: NextPage<Props> = function (props) {
+const DefaultLayout = (props: Props) => {
   const metaTitle = `${props.title} by Nyoman Frastyawan`;
   const metaDescription = `${metaTitle}. Working on backend software developer with Golang and Javascript.`;
 
@@ -16,7 +15,7 @@ const DefaultLayout: NextPage<Props> = function (props) {
     <div className='max-w-3xl pt-20 mx-2 my-0 text-center md:mx-auto'>
       <NavBar />
       <Head>
-        <title>{props.title} | Nyoman Frastyawan</title>
+        <title>{`${props.title} | Nyoman Frastyawan`}</title>
         <link rel='shortcut icon' href='/favicon.ico' />
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
 
